@@ -1,0 +1,30 @@
+# Configuración de ejemplo para convertir Planner -> Levane.
+sheet_name: "Planificación"
+header_row: 7
+clear_existing: true
+mappings:
+  - template_header: "Actividad"
+    planner_field: "Task Name"
+  - template_header: "Responsable"
+    planner_field: "Assigned To"
+  - template_header: "Fecha Inicio"
+    planner_field: "Start Date"
+    transform: "date"
+    options:
+      output_format: "%d/%m/%Y"
+  - template_header: "Fecha Fin"
+    planner_field: "Due Date"
+    transform: "date"
+    options:
+      output_format: "%d/%m/%Y"
+  - template_header: "Horas"
+    transform: "duration_hours"
+    options:
+      start_field: "Start Date"
+      end_field: "Due Date"
+      hours_per_day: 8
+  - template_header: "Notas"
+    transform: "concat"
+    options:
+      fields: ["Bucket Name", "Checklist items"]
+      separator: " - "
