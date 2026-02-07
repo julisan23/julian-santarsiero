@@ -1,0 +1,10 @@
+# Configuración de ejemplo para construir URLs de descarga.
+# Ajusta las plantillas según los nombres reales de archivo.
+
+templates:
+  modelo_zip: "https://epok.buenosaires.gob.ar/cur3d/modelBA/zip/{smp}.zip"
+  dxf: "https://epok.buenosaires.gob.ar/cur3d/dxf/{smp}.dxf"
+  mbtiles: "https://epok.buenosaires.gob.ar/mbtiles/{smp}.mbtiles"
+
+# Opcional: endpoint de geocodificación USIG para resolver SMP desde dirección.
+# geocoder_url: "https://ws.usig.buenosaires.gob.ar/geocoder/2.2/geocoding?direccion={address}"
