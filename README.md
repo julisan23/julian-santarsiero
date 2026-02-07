@@ -63,3 +63,12 @@ register_transform("mi_transformacion", mi_transformacion)
 ## Dependencias
 
 Las dependencias mínimas se encuentran en `requirements.txt`.
+
+## Ciudad3D lookup (dirección o SMP)
+
+Se agregó un buscador simple que construye URLs de descarga para Ciudad3D a partir
+
+- de un SMP directo, o
+- de una dirección usando un CSV de mapeo.
+
+Consulta `docs/ciudad3d_lookup.md` para configurar plantillas y ejemplos de uso.
